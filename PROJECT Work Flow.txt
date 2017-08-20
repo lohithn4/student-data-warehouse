@@ -1,0 +1,48 @@
+Project Work Flow
+
+
+ 
+
+week 1: 					19-02-13-------24-02-13
+
+1.How are we going to apply extraction of data transformation of and loading of data?
+2.How the preprocessing process is done?
+3.output of ETL process analysis.
+4.How to make use of output data?
+5.HOw to analysze talend output as a multidimenstional data?
+6.Construction of star schema for forming a data cube
+7.use mondrian (mondrian database)
+8.analyzing the data cube in mondrian
+9.How the structuring , storage and organization of data is done in mondrian?
+10.How th OLAP operations have been implemented in mondrian?
+
+
+week 2:						25-02-13--------3-3-13
+
+11.working of mondrian with proper hands on flexibility
+12.cube formation with proper dimension analysis
+13.working with MDX getting familiarity with function operations working java integration
+14.how the datamining techniques have been adapted by mondrian?
+15.Analysing existing examples--literature survey
+16.what are data mining techniques we need to include by writing the code?
+17.analyzing the output and testing of operations with data mining techniques
+( Like drill down, roll up with classification and clustering ...)
+
+week 3:                     4-3-13---------10-3-13  
+								6.43
+
+18.analysing the existing examples of decision support, analyzation, quering in mondrian.
+19. How are we achieving query reporting,analysing the data,visualization and decision support model?
+17.How do we import any data warehouse project in any of the existing IDEs?
+18.Developing an GUI using java.
+19.working on quering/reporting.
+
+week 4:                    11-3-13---------17-3-13
+
+20.working on analyzation part.
+21.working on decision support part.  
+22.Providing options to the decision support,analyzation,reporting project objectives.
+23.performing Testing - verification ,validation and presenting final work done.
+
+							18-3-13--------24-4-13
+							25-3-13--------4-4-13

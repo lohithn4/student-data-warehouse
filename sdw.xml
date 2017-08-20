@@ -1,0 +1,196 @@
+<Schema name="sdw">
+  <Dimension visible="true" highCardinality="false" name="Admission">
+    <Hierarchy name="Admission details" visible="true" hasAll="true" allMemberName="Admission">
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Batch">
+    <Hierarchy visible="true" hasAll="false">
+      <Table name="batch">
+      </Table>
+      <Level name="Batch Code" visible="true" column="batch_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Batch" visible="true" column="batch_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="College">
+    <Hierarchy visible="true" hasAll="false">
+      <Table name="college">
+      </Table>
+      <Level name="College Code" visible="true" column="college_code" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="College Name" visible="true" column="college_name" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Students">
+    <Hierarchy visible="true" hasAll="false">
+      <Table name="students">
+      </Table>
+      <Level name="Name" visible="true" column="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Department">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="department">
+      </Table>
+      <Level name="Department Code" visible="true" column="department_code" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Department Name" visible="true" column="department_description" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Faculty">
+    <Hierarchy visible="true" hasAll="false">
+      <Table name="faculty">
+      </Table>
+      <Level name="Faculty Name" visible="true" column="faculty_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Placement">
+    <Hierarchy visible="true" hasAll="false">
+      <Table name="placement">
+      </Table>
+      <Level name="Name" visible="true" column="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Tier" visible="true" column="tier" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Internship" visible="true" column="internship" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Company Name" visible="true" column="company_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Course Info">
+    <Hierarchy visible="true" hasAll="false">
+      <Table name="placement">
+      </Table>
+      <Level name="Name" visible="true" column="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Semester" visible="true" column="sem" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Department" visible="true" column="dept" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Subject Code" visible="true" column="subject_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Branch" visible="true" column="branch" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Subject Info">
+    <Hierarchy visible="true" hasAll="false">
+      <Table name="subject_info">
+      </Table>
+      <Level name="Sem" visible="true" column="sem" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Subject_Code" visible="true" column="subject_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Subject Name" visible="true" column="subject_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Credits" visible="true" column="credits" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Projects">
+    <Hierarchy visible="true" hasAll="false">
+      <Table name="projects">
+      </Table>
+      <Level name="Project Title" visible="true" column="project_title" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Subject Code" visible="true" column="sub_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Guide" visible="true" column="guide" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Credits" visible="true" column="credits" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Result SGPA">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="result_sgpa">
+      </Table>
+      <Level name="Sem" visible="true" column="sem" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sc01" visible="true" column="sc01" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sc02" visible="true" column="sc02" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sc03" visible="true" column="sc03" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sc04" visible="true" column="sc04" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sc05" visible="true" column="sc05" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sc06" visible="true" column="sc06" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sc07" visible="true" column="sc07" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="SGPA" visible="true" column="sgpa" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Student" visible="true" defaultMeasure="cgpa_measure" cache="true" enabled="true">
+    <Table name="student_fact">
+    </Table>
+    <DimensionUsage source="Admission" name="Admission" visible="true" foreignKey="usn" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Batch" name="Batch" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="College" name="College" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Students" name="Students" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Department" name="Department" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Faculty" name="Faculty" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Placement" name="Placement" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Projects" name="Projects" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Course Info" name="Course Info" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Subject Info" name="Subject Info" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Result SGPA" name="Result SGPA" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <Dimension visible="true" foreignKey="usn" highCardinality="false" name="Result CGPA">
+      <Hierarchy visible="true" hasAll="true" allMemberName="Overall cgpa" defaultMember="Overall cgpa">
+        <Table name="result_cgpa" alias="">
+        </Table>
+        <Level name="usn" visible="true" table="result_cgpa" column="usn" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <Property name="Sem1" column="sem1" type="Numeric">
+          </Property>
+          <Property name="Sem2" column="sem2" type="Numeric">
+          </Property>
+          <Property name="Sem3" column="sem3" type="Numeric">
+          </Property>
+          <Property name="Sem4" column="sem4" type="Numeric">
+          </Property>
+          <Property name="Sem5" column="sem5" type="Numeric">
+          </Property>
+          <Property name="Sem6" column="sem6" type="Numeric">
+          </Property>
+          <Property name="Sem7" column="sem7" type="Numeric">
+          </Property>
+          <Property name="Sem8" column="sem8" type="Numeric">
+          </Property>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="ewd_id" highCardinality="false" name="EWD">
+      <Hierarchy visible="true" hasAll="false">
+        <Table name="ewd">
+        </Table>
+        <Level name="Event Title" visible="true" column="event_title" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Date" visible="true" column="date" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="CGPA" column="cgpa_measure" formatString="Standard" aggregator="sum">
+    </Measure>
+  </Cube>
+</Schema>
